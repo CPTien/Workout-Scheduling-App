@@ -8,8 +8,8 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var workoutsRouter = require('./routes/routeWorkouts');
-// var notesRouter = require('./routes/notes');
-// var performersRouter = require('./routes/performers');
+var notesRouter = require('./routes/routeNotes');
+var schedulesRouter = require('./routes/routeSchedules');
 
 var app = express();
 
@@ -21,12 +21,29 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
+
+// app.use(session({
+//   secret: process.env.SECRET,
+//   resave: false,
+//   saveUninitialized: true
+// }));
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// app.use(function (req, res, next) {
+//   res.locals.user = req.user;
+//   next();
+// });
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/workouts', workoutsRouter);
-// app.use('/', notesRouter);
-// app.use('/', performersRouter);
+app.use('/', workoutsRouter);
+app.use('/', notesRouter);
+app.use('/', schedulesRouter);
 
 
 // catch 404 and forward to error handler
