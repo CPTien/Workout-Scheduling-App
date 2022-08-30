@@ -2,9 +2,13 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+// var session = require('express-session');
+// var passport = require('passport');
+var methodOverride = require('method-override');
 var logger = require('morgan');
 require('dotenv').config(); // for .env file
 require('./config/database');
+// require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var workoutsRouter = require('./routes/routeWorkouts');
