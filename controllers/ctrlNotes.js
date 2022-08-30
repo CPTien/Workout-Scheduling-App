@@ -1,4 +1,4 @@
-const Workout = require('../models/modelWorkout');
+// const UserInfo = require('../models/modelUserInfo');
 
 
 // function create(req, res) {
@@ -33,7 +33,7 @@ const Workout = require('../models/modelWorkout');
 // }
 
 
-module.exports = {
-    // create,
-    // delete: deleteReview
-};
+// module.exports = {
+//     create,
+//     // delete: deleteReview
+// };
