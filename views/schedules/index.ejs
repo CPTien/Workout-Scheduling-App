@@ -5,18 +5,22 @@
 <table id="schedule">
   <thead>
     <tr>
+      <th>Day</th>
       <th>Workout</th>
       <th>Sets</th>
       <th>Reps</th>
-      <th>Details</th>
+      <th>Weights</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% schedules.forEach(function(s) { %>
       <tr>
-        <td><%= m.workout %></td>
-        <td><%= m.sets %></td>
-        <td><%= m.reps %></td>
+        <td><%= s.day %></td>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
         <td><a href="/schedules/<%= s._id %>">Detail</a></td>
       </tr>
       <% }); %>

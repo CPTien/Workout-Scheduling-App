@@ -5,17 +5,21 @@
 
 <form id="add-to-schedule-form" action="/schedules" method="POST">
   <label>Day:</label>
-  <input type="text" name="day">
+  <select name="day">
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+  </select>
   <label>Workout:</label>
   <input type="text" name="workout">
   <label>Sets:</label>
-  <input type="text" name="sets">
+  <input type="number" name="sets">
   <label>Reps:</label>
-  <input type="text" name="reps">
+  <input type="number" name="reps">
   <label>Weights:</label>
   <input type="text" name="weights">
-  <label>Note:</label>
-  <textarea name="note"></textarea>
 
   <input type="submit" value="Add to Schedule">
 </form>

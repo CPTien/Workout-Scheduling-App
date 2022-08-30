@@ -3,10 +3,10 @@ const router = express.Router();
 
 const noteCtrl = require('../controllers/ctrlNotes');
 
-// // http://localhost:3000/movies/123/reviews
-// router.post("/movies/:id/reviews", reviewCtrl.create);
+// http://localhost:8000/schudules/123/notes
+router.post('/schedules/:id/notes', noteCtrl.createNote);
 
-// // http://localhost:3000/reviews/123
-// router.delete('/reviews/:id', reviewCtrl.delete);
+// // http://localhost:3000/notes/123
+router.delete('notes/:id', noteCtrl.deleteNote);
 
 module.exports = router;

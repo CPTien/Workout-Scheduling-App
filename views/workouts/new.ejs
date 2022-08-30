@@ -1,22 +1,35 @@
 <%- include('../partials/header') %>
 
 <div>Please ensure that the workout is not in the following list:</div>
-<section id="workout-container">
-  <% workouts.forEach(function(w) { %>
-    <article class="workout-list"><%= w.name %></article>
-    <article class="workout-list"><%= w.category %></article>
-    <article class="workout-list"><%= w.group %></article>
-    <article class="workout-list"><%= w.description %></article>
-  <% }) %>
-</section>
+<br>
+<table id="Workout-Container">
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Category</th>
+      <th>Group</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% workouts.forEach(function(w) { %>
+      <tr>
+        <td class="workout-list"><%= w.name %></td>
+        <td class="workout-list"><%= w.category %></td>
+        <td class="workout-list"><%= w.group %></td>
+        <td class="workout-list"><%= w.description %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
 
 <form id="add-workout-form" action="/workouts" method="POST">
-  <label>Name:</label>
+  <label>Workout:</label>
   <input type="text" name="name">
   <label>Category:</label>
   <select name="category">
-    <option value="cross-fit">Cross-Fit</option>
     <option value="weight-lifting">Weight-Lifting</option>
+    <option value="cross-fit">Cross-Fit</option>
     <option value="cardio">Cardio</option>
     <option value="other">Other</option>
   </select>
