@@ -7,7 +7,7 @@ require('dotenv').config(); // for .env file
 require('./config/database');
 
 var indexRouter = require('./routes/index');
-var workoutsRouter = require('./routes/workouts');
+var workoutsRouter = require('./routes/routeWorkouts');
 // var notesRouter = require('./routes/notes');
 // var performersRouter = require('./routes/performers');
 
