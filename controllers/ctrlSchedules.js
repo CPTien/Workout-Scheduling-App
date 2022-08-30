@@ -2,12 +2,13 @@ const Workout = require('../models/modelWorkout');
 const Schedule = require('../models/modelSchedule');
 
 
-// function index(req, res) {
-//   Movie.find({}, function(err, movies) {
-//     res.render('movies/index', { title: 'All Movies', movies });
-//   });
-// }
+function index(req, res) {
+  Schedule.find({}, function(err, schedules) {
+    res.render('schedules/index', { title: 'All Schedules', schedules });
+  });
+}
 
+// this function is used for showing the details page
 // function show(req, res) {
 //   // Find the cast that belongs to the movie
 //   Movie.findById(req.params.id)
@@ -25,27 +26,26 @@ const Schedule = require('../models/modelSchedule');
 //     });
 // }
 
-// function newMovie(req, res) {
-//   res.render('movies/new', { title: 'Add Movie' });
-// }
+function newSchedule(req, res) {
+  res.render('schedules/new', { title: 'Add Schedule' });
+}
 
-// function create(req, res) {
-//   // convert nowShowing's checkbox of nothing or "on" to boolean
-//   req.body.nowShowing = !!req.body.nowShowing;
-//   for (let key in req.body) {
-//     if (req.body[key] === '') delete req.body[key];
-//   }
-//   const movie = new Movie(req.body);
-//   movie.save(function(err) {
-//     if (err) return res.redirect('/movies/new');
-//     res.redirect(`/movies/${movie._id}`);
-//   });
-// }
+// this function creates a new workout and add it to database
+function addToSchedule(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
+  const schedule = new Schedule (req.body);
+  schedule.save(function(err) {
+    if (err) return res.redirect('/schedules/new');
+    res.redirect(`/schedules/${schedule._id}`);
+  });
+}
 
 
 module.exports = {
-    // index,
+    index,
     // show,
-    // new: newMovie,
-    // create
+    newSchedule,
+    addToSchedule,
 };

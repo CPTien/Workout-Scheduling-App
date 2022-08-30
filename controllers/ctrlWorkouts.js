@@ -1,32 +1,27 @@
-// const Performer = require('../models/performer');
 const Workout = require('../models/modelWorkout');
 
+// this function creates a new workout and add it to database
+function createWorkout(req, res) {
+  Workout.create(req.body, function (err, workout) {
+    res.redirect('workouts/new');
+  });
+}
 
-// function create(req, res) {
-//   // Need to "fix" date formatting to prevent day off by 1
-//   // This is due to the <input type="date"> returning the date
-//   // string in this format:  "YYYY-MM-DD"
-//   // https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off
-//   const s = req.body.born;
-//   req.body.born = `${s.substr(5, 2)}-${s.substr(8, 2)}-${s.substr(0, 4)}`;
-//   Performer.create(req.body, function (err, performer) {
-//     res.redirect('/performers/new');
-//   });
-// }
+// this function finds the workout added from function up top and render it in current page
+function newWorkout(req, res) {
+  Workout.find({}, function (err, workouts) {
+    res.render('workouts/new', {
+      title: 'Add Workout', // this is the H1 tag, or the page title 
+      workouts
+    });
+  });
+}
 
-// function newPerformer(req, res) {
-//   Performer.find({}, function (err, performers) {
-//     res.render('performers/new', {
-//       title: 'Add Performer', // this is the H1 tag, or the page title 
-//       performers
-//     });
-//   })
-// }
-
-// function addToCast(req, res){
-//   Movie.findById(req.params.id, function(error, movie){
-//     movie.cast.push(req.body.performerId);
-//     movie.save(function(error){
+// // this function if for adding the workouts created here to schedule/new page
+// function addWorkoutToSchedule(req, res){
+//   Workout.findById(req.params.id, function(error, workout){
+//     workout.cast.push(req.body.workoutId);
+//     workout.save(function(error){
 //       res.redirect(`/movies/${movie._id}`);
 //     });
 //   });
@@ -34,7 +29,7 @@ const Workout = require('../models/modelWorkout');
 
 
 module.exports = {
-//   new: newPerformer,
-//   create,
-//   addToCast
+  newWorkout,
+  createWorkout,
+//   addWorkoutToSchedule
 };

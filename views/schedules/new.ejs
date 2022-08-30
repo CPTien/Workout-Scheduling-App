@@ -1,0 +1,23 @@
+<!-- this is the add workout to schedule page -->
+<!-- be able to add: workout from workout schema and the sets, reps, weights, from the userinfo schema -->
+
+<%- include('../partials/header') %>
+
+<form id="add-to-schedule-form" action="/schedules" method="POST">
+  <label>Day:</label>
+  <input type="text" name="day">
+  <label>Workout:</label>
+  <input type="text" name="workout">
+  <label>Sets:</label>
+  <input type="text" name="sets">
+  <label>Reps:</label>
+  <input type="text" name="reps">
+  <label>Weights:</label>
+  <input type="text" name="weights">
+  <label>Note:</label>
+  <textarea name="note"></textarea>
+
+  <input type="submit" value="Add to Schedule">
+</form>
+
+<%- include('../partials/footer') %>
