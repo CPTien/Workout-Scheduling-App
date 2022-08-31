@@ -7,6 +7,7 @@ const noteCtrl = require('../controllers/ctrlNotes');
 router.post('/schedules/:id/notes', noteCtrl.createNote);
 
 // // http://localhost:3000/notes/123
-router.delete('notes/:id', noteCtrl.deleteNote);
+router.delete('/notes/:id', noteCtrl.deleteNote);
+
 
 module.exports = router;

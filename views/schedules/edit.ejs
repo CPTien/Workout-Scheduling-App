@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<form id="edit-schedule-form" action="/schedules/:id/edit" method="GET">
+    <label>Sets:</label>
+    <input type="number" name="sets">
+    <label>Reps:</label>
+    <input type="number" name="reps">
+    <label>Weights:</label>
+    <input type="text" name="weights">
+  
+    <input type="submit" value="Update">
+</form>
+
+<%- include('../partials/footer') %>

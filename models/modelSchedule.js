@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const noteSchema = new Schema({ // need to edit this later
+const noteSchema = new Schema({ 
     content: String,
-    // user: {type: Schema.Types.ObjectId, ref: 'User'},
-    // userName: String,
-    // userAvatar: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    userName: String,
+    userAvatar: String,
 }, {
     timestamps: true
 });

@@ -1,33 +1,32 @@
 var express = require('express');
-var router = express.Router();
-// const passport = require('passport');
+const router = express.Router();
+const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.redirect('/schedules');
 });
 
-// // Google login
-// router.get('/auth/google', passport.authenticate(
-//   'google',
-//   {scope: ['profile', 'email']}
-// ));
+// Google login
+router.get('/auth/google', passport.authenticate(
+  'google',
+  {scope: ['profile', 'email']}
+));
 
 
-// // Google call back route
-// router.get('/oauth2callback', passport.authenticate(
-//   'google',
-//   {
-//       successRedirect: '/movies',
-//       failureRedirect: '/movies'
-//   }
-// ));
+// Google call back route
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+      successRedirect: '/schedules',
+      failureRedirect: '/schedules'
+  }
+));
 
-
-// // Google logout
-// router.get('/logout', function (req, res) {
-//   req.logout();
-//   res.redirect('/movies');
-// });
+// Google logout
+router.get('/logout', function (req, res) {
+  req.logout();
+  res.redirect('/schedules');
+});
 
 module.exports = router;

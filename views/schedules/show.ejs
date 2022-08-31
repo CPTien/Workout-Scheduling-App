@@ -8,36 +8,46 @@
                 <th>Sets</th>
                 <th>Reps</th>
                 <th>Weights</th>
-            </tr>
         </thead>
         <tbody>
-
-        </tbody>
             <tr>
                 <th><%= schedule.workout %></th>
                 <th><%= schedule.sets %></th>
                 <th><%= schedule.reps %></th>
                 <th><%= schedule.weights %></th>
             </tr>
-        </table>
+        </tbody>
+     </table>
+     <br>
+     <form action="/schedules/<%= schedule._id %>/edit" method="GET">
+        <button type="submit">Edit</button>
+    </form>
 </section>
+
+<br><br>
+<h2>Notes</h2>
+<% if (user) { %>
+    <form id="add-note-form" method="POST" action="/schedules/<%= schedule._id %>/notes">
+ 
+        <textarea name="content"></textarea>
+        <input type="submit" value="+">
+    </form>
+<% } %>
 
 <% if (schedule.notes.length) { %>
     <table>
-      <thead>
-        <tr>
-          <th>Note</th>
-        </tr>
-      </thead>
+
       <tbody>
         <% schedule.notes.forEach(function(n) { %>
           <tr>
-            <td><%= n.content %></td>
             <td>
-                <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
-                  <input id="delete-note" type="submit" name="" value="X">
-                </form>
-                </td>
+                <% if (user && user._id.equals(n.user)) { %>
+                    <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+                        <button type="submit">x</button>
+                    </form>
+                <% } %>
+            </td>
+            <td><%= n.content %></td>
           </tr>
         <% }); %>
       </tbody>
@@ -46,13 +56,6 @@
     <h5>No Notes Yet</h5>
   <% } %>
 
-<br><br>
-<h2>Notes</h2>
-    <form id="add-note-form" method="POST" action="/schedules/<%= schedule._id %>/notes">
-        <label>Notes:</label>
-        <textarea name="content"></textarea>
-        <input type="submit" value="Add Note">
-    </form>
 
 
 <%- include('../partials/footer') %>

@@ -3,8 +3,12 @@ const Schedule = require('../models/modelSchedule');
 
 
 function createNote(req, res) {
-    // Find the schedule to embed the review within
+    // Find the schedule to embed the note within
     Schedule.findById(req.params.id, function (err, schedule) {
+        
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+
         schedule.notes.push(req.body);
         // Always save the top-level document (not subdocs)
         schedule.save(function (err) {
@@ -14,15 +18,25 @@ function createNote(req, res) {
 }
 
 function deleteNote(req, res, next) {
-    Schedule.findById(req.params.id).populate('notes').exec(function (err, notes) {
-        Schedule.findByIdAndDelete(req.params.id, function (err) {
+    Schedule.findOne({'notes._id': req.params.id}).then(function (schedule) {
+        const note = schedule.notes.id(req.params.id);
+        if (!note.user.equals(req.user._id)) return res.redirect(`/schedules/${schedule._id}`);
+        note.remove();
+        schedule.save().then(function () {
             res.redirect(`/schedules/${schedule._id}`);
-        });
-    });
+        }).catch(function (error) {
+            return next(error);
+        })
+    })
+}
+
+function updateNote(req, res) {
+
 }
 
 
 module.exports = {
     createNote,
     deleteNote,
+    updateNote,
 }; 

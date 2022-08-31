@@ -27,6 +27,15 @@ function addToSchedule(req, res) {
     res.redirect(`/schedules`); //to update this one later
   });
 }
+// this function lets user edit schedule
+function editSchedule(req, res) {
+
+}
+
+// this function lets user update the edited schedule
+function updateSchedule(req, res) {
+
+}
 
 
 module.exports = {
@@ -34,4 +43,6 @@ module.exports = {
     show,
     newSchedule,
     addToSchedule,
+    editSchedule,
+    updateSchedule,
 };
