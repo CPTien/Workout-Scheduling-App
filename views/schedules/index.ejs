@@ -2,10 +2,10 @@
 
 <%- include('../partials/header') %>
 
-<table id="schedule">
+<table id="schedule-1">
+  <div>Monday</div>
   <thead>
     <tr>
-      <th>Day</th>
       <th>Workout</th>
       <th>Sets</th>
       <th>Reps</th>
@@ -15,16 +15,183 @@
   </thead>
   <tbody>
     <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Monday') { %>
       <tr>
-        <td><%= s.day %></td>
         <td><%= s.workout %></td>
         <td><%= s.sets %></td>
         <td><%= s.reps %></td>
         <td><%= s.weights %></td>
         <td><a href="/schedules/<%= s._id %>">Detail</a></td>
       </tr>
-      <% }); %>
-    </tbody>
-  </table>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-2">
+  <div>Tuesday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Tuesday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-3">
+  <div>Wednesday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Wednesday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-4">
+  <div>Thursday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Thursday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-5">
+  <div>Friday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Friday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-6">
+  <div>Saturday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Saturday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+
+<table id="schedule-7">
+  <div>Sunday</div>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Weights</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% schedules.forEach(function(s) { %>
+      <% if (s.day === 'Sunday') { %>
+      <tr>
+        <td><%= s.workout %></td>
+        <td><%= s.sets %></td>
+        <td><%= s.reps %></td>
+        <td><%= s.weights %></td>
+        <td><a href="/schedules/<%= s._id %>">Detail</a></td>
+      </tr>
+      <% }%>
+    <% }); %>
+  </tbody>
+</table>
+<br>
+<br>
+  
   
 <%- include('../partials/footer') %>
+

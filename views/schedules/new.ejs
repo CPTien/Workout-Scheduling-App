@@ -1,5 +1,5 @@
 <!-- this is the add workout to schedule page -->
-<!-- be able to add: workout from workout schema and the sets, reps, weights, from the userinfo schema -->
+<!-- be able to add: workout from workout schema and the sets, reps, weights, from the schedule schema -->
 
 <%- include('../partials/header') %>
 
@@ -11,9 +11,18 @@
     <option value="Wednesday">Wednesday</option>
     <option value="Thursday">Thursday</option>
     <option value="Friday">Friday</option>
+    <option value="Saturday">Friday</option>
+    <option value="Sunday">Friday</option>
   </select>
   <label>Workout:</label>
-  <input type="text" name="workout">
+  <input type="string" name="workouts">
+ <!-- <select name="workout">
+    dynamically render workouts
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select> -->
   <label>Sets:</label>
   <input type="number" name="sets">
   <label>Reps:</label>
@@ -23,5 +32,6 @@
 
   <input type="submit" value="Add to Schedule">
 </form>
+
 
 <%- include('../partials/footer') %>

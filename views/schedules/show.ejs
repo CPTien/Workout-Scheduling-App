@@ -22,6 +22,9 @@
      <form action="/schedules/<%= schedule._id %>/edit" method="GET">
         <button type="submit">Edit</button>
     </form>
+    <form action="/schedules/<%= schedule._id %>?_method=DELETE" method="POST">
+        <button type="submit">x</button>
+    </form>
 </section>
 
 <br><br>
@@ -58,4 +61,8 @@
 
 
 
+
+
 <%- include('../partials/footer') %>
+
+

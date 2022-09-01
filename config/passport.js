@@ -29,14 +29,11 @@ passport.use(
 );
 
 passport.serializeUser(function (user, cb) {
-    console.log("serializeUser=====>")
-    console.log(user);
     cb(null, user._id);
 });
 
 
 passport.deserializeUser(function (userId, cb) {
-    console.log(userId);
     User.findById(userId).then(function (user) {
         cb(null, user);
     });

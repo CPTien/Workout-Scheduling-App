@@ -1,4 +1,5 @@
 const Workout = require('../models/modelWorkout');
+const Schedule = require('../models/modelSchedule');
 
 // this function creates a new workout and add it to database
 function createWorkout(req, res) {
@@ -17,12 +18,12 @@ function newWorkout(req, res) {
   });
 }
 
-// // this function if for adding the workouts created here to schedule/new page
+// this function if for adding the workouts created here to schedules/new page
 // function addWorkoutToSchedule(req, res){
-//   Workout.findById(req.params.id, function(error, workout){
-//     workout.cast.push(req.body.workoutId);
-//     workout.save(function(error){
-//       res.redirect(`/movies/${movie._id}`);
+//   Schedule.findById(req.params.id, function(error, schedule){
+//     schedule.workout.push(req.body.workoutId);
+//     schedule.save(function(error){
+//       res.redirect(`/schedules`);
 //     });
 //   });
 // }
@@ -31,5 +32,4 @@ function newWorkout(req, res) {
 module.exports = {
   newWorkout,
   createWorkout,
-//   addWorkoutToSchedule
 };

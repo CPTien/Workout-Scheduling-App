@@ -9,6 +9,8 @@ router.get('/:id', isLoggedIn, scheduleCtrl.show);
 router.post('/', isLoggedIn,  scheduleCtrl.addToSchedule); 
 router.get('/:id/edit', scheduleCtrl.editSchedule); 
 router.put('/:id', scheduleCtrl.updateSchedule); 
+router.delete('/:id', scheduleCtrl.deleteSchedule);
+router.get('/new', scheduleCtrl.getAllWorkouts);
 
 
 

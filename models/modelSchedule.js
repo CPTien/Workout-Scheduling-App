@@ -11,14 +11,14 @@ const noteSchema = new Schema({
 });
 
 const scheduleSchema = new Schema({
-    day: {type: String},
+    day: {type: String, enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]},
     sets: {type: Number},
     reps: {type: Number},
     weights: {type: String},
-    // workout: {
+    // workout: [{
     //     type: Schema.Types.ObjectId,
     //     ref: 'Workout',
-    // },
+    // }],
     workout: {type: String},
     notes: [noteSchema]
 }, {
