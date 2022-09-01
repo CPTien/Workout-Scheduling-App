@@ -11,7 +11,7 @@ const noteSchema = new Schema({
 });
 
 const scheduleSchema = new Schema({
-    day: {type: String, enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]},
+    day: {type: String, enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]},
     sets: {type: Number},
     reps: {type: Number},
     weights: {type: String},

@@ -1,12 +1,12 @@
 const Workout = require('../models/modelWorkout');
 const Schedule = require('../models/modelSchedule');
 
-function getAllWorkouts(req, res) {
-  Workout.find({}, function(err, workouts) {
-    console.log(workouts+"this is a workout")
-    res.render('schedules/new', { title: 'Schedule', workouts });
-  });
-}
+// function getAllWorkouts(req, res) {
+//   Workout.find({}, function(err, workouts) {
+//     console.log(workouts+"this is a workout")
+//     res.render('schedules/new', { title: 'Schedule', workouts });
+//   });
+// }
 
 function index(req, res) {
   Schedule.find({}, function(err, schedules) {
@@ -74,5 +74,5 @@ module.exports = {
     editSchedule,
     updateSchedule,
     deleteSchedule,
-    getAllWorkouts,
+    // getAllWorkouts,
 };
