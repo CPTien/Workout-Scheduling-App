@@ -33,6 +33,7 @@ function addToSchedule(req, res) {
     res.redirect(`/schedules`); //to update this one later
   });
 }
+
 // this function lets user edit schedule
 function editSchedule(req, res) {
   Schedule.findOne({_id: req.params.id}, function(err, schedule) {

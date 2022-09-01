@@ -36,6 +36,7 @@ to add once done with CSS
 ---
 ## Wins
 Familiarize with how back-end works. Refresh memory on CSS and HTML manipulations.
+
 ---
 
 ## Hurdles

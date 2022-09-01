@@ -1,39 +1,39 @@
 * {
   padding: 0px;
-  font-family: Roboto, Monaco, Helvetica;
+  font-family: Consolas,monaco,monospace;
 }
 
 body {
   margin: 0;
   height: 100vh;
-  background-color: rgb(55, 55, 55);
+  background-color:rgb(30,30,30);
 }
 /* header-------------------------------------- */
 .a-tag-header {
   margin: center;
   width: 50%;
-  color: white;
+  color:rgb(225, 225, 225);
   padding: 30px;
   text-decoration: none;
   font-size: 20px;
 }
 
 .app-name {
-  color: white;
+  color: rgb(198, 139, 115);
   font-size: 40px;
 }
 
 .plus{
   color: red;
-  padding-right: 28px;
+  padding-right: 20px;
 }
 .a-tag-header:hover {
-  color:grey;
+  color:rgb(102, 102, 102)
 }
 
 body > nav {
   /* grid-area: nav; */
-  background-color: #202124;
+  background-color:rgb(60, 60, 60); 
   /* display: flex;
   justify-content: flex-end; */
   align-items: center;
@@ -57,7 +57,7 @@ body > nav {
 
 .the-title {
   margin-left: 40px;
-  color: white;
+  color:rgb(82, 147, 201);
   font-size: 40px;
 }
 
@@ -67,7 +67,7 @@ footer{
   position:fixed;
   bottom:0;
   left:0;
-  background-color: #202124;
+  background-color:rgb(0, 122, 204);
   display: flex;
   justify-content: flex-end;
   width: 100vw;
@@ -76,7 +76,7 @@ footer{
   margin: auto;
   padding-top: 10px;
   padding-bottom: 10px;
- }
+}
 
 
 
@@ -86,9 +86,9 @@ table {
   margin-left: 40px;
   margin-top: 5px;
   border: 2px solid;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 5px;
-  border-color: white;
+  border-color:rgb(144, 202, 232);
 }
 
 th, td {
@@ -97,7 +97,11 @@ th, td {
   padding-left: 5px;
   padding-right: 50px;
   width: 100px;
-  color: white;
+  color:rgb(90, 129, 73);
+}
+
+th {
+  color:rgb(144, 202, 232);
 }
 
 .last {
@@ -106,17 +110,13 @@ th, td {
 
 a {
   text-decoration: none;
-  color: white;
+  color:rgb(198, 139, 115);
 }
 
 div {
   margin-left: 40px;
   font-size: 30px;
-  color: white;
-}
-
-span {
-  color: red;
+  color: rgb(208, 208, 161);
 }
 
 /* add workout--------------------------------------------- */
@@ -128,7 +128,7 @@ span {
 
 label {
   display: block;
-  color: white;
+  color: rgb(208, 208, 161);
   font-size: 25px;
   padding-bottom: 5px;
   padding-top: 15px;
@@ -152,11 +152,11 @@ textarea {
   margin-top: 20px;
   margin-bottom: 40px;
   display: block;
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 20px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   padding: 8px;
   cursor: pointer;
 }
@@ -177,13 +177,12 @@ textarea {
 
 .add-to-schedule-button {
   margin-top: 40px;
-  margin-left: 110px;
   display: block;
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 20px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   cursor: pointer;
   height: 40px;
   width: 40px;
@@ -196,19 +195,22 @@ textarea {
 } 
 
 /* edit detail (show.ejs) --------------------------------------------- */
+.th-text {
+  color:rgb(90, 129, 73);
+}
 
 .edit-button {
   /* margin-top: 20px;
   margin-left: 40px; */
   /* display: inline; */
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 12px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   cursor: pointer;
-  height:25px;
-  width:35px;
+  height:28px;
+  width:40px;
   margin-left: -35px;
 }
 
@@ -222,14 +224,14 @@ textarea {
   /* margin-top: 20px;
   margin-left: 40px;
   display: inline; */
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 12px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 28px;
+  width: 28px;
   margin-left: -200px;
   /* padding-right: -200px; */
 }
@@ -242,7 +244,7 @@ textarea {
 .notes-text {
   margin-left: 40px;
   font-size: 30px;
-  color: white;
+  color:rgb(200, 200, 64); 
 }
 
 .note-table-container {
@@ -258,11 +260,11 @@ textarea {
 }
 
 .delete-note-button {
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 12px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   cursor: pointer;
   height: 20px;
   width: 20px;
@@ -277,16 +279,16 @@ h5 {
   margin-top: 0;
   margin-bottom: -20px;
   margin-left: 40px;
-  color: white;
+  color:rgb(144, 202, 232);
   font-size: 20px;
 }
 
 .add-note-button {
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid;
   font-size: 15px;
   background-color: #202124;
-  color: white;
+  color:rgb(200, 200, 64); 
   cursor: pointer;
   height: 25px;
   width: 25px;
@@ -300,3 +302,26 @@ h5 {
 }
 
 /* edit workout (edit.ejs) --------------------------------------------- */
+#edit-schedule-form {
+  margin-left: 40px;
+}
+
+
+.edit-s-button {
+  margin-top: 20px;
+  display: block;
+  border-radius: 3px;
+  border: 2px solid;
+  font-size: 15px;
+  background-color: #202124;
+  color:rgb(200, 200, 64); 
+  cursor: pointer;
+  height: 34px;
+  width: 136px;
+}
+
+.edit-s-button:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
