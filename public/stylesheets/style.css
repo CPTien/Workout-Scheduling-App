@@ -172,20 +172,21 @@ textarea {
 
 #add-to-schedule-form {
   margin-top: 20px;
-  padding-left: 40px;
+  margin-left: 40px;
 }
 
 .add-to-schedule-button {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 110px;
   display: block;
   border-radius: 4px;
   border: 2px solid;
   font-size: 20px;
   background-color: #202124;
   color: white;
-  padding: 8px;
   cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 .add-to-schedule-button:hover {
@@ -194,14 +195,108 @@ textarea {
   border-color: white;
 } 
 
-/* edit detail --------------------------------------------- */
+/* edit detail (show.ejs) --------------------------------------------- */
 
+.edit-button {
+  /* margin-top: 20px;
+  margin-left: 40px; */
+  /* display: inline; */
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 12px;
+  background-color: #202124;
+  color: white;
+  cursor: pointer;
+  height:25px;
+  width:35px;
+  margin-left: -35px;
+}
 
+.edit-button:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
 
+.delete-button {
+  /* margin-top: 20px;
+  margin-left: 40px;
+  display: inline; */
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 12px;
+  background-color: #202124;
+  color: white;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-left: -200px;
+  /* padding-right: -200px; */
+}
 
+.delete-button:hover {
+  background-color: red;
+  border-color: red;
+}
 
+.notes-text {
+  margin-left: 40px;
+  font-size: 30px;
+  color: white;
+}
 
+.note-table-container {
+  margin-top:20px;
+  border: 2px;
+}
 
+.note-textarea {
+  margin-top: 40px;
+  margin-left: 40px;
+  width: 300px;
+  height: 100px;
+}
 
+.delete-note-button {
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 12px;
+  background-color: #202124;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
 
-/* edit workout --------------------------------------------- */
+.delete-note-button:hover {
+  background-color: red;
+  border-color: red;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: -20px;
+  margin-left: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.add-note-button {
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 15px;
+  background-color: #202124;
+  color: white;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
+.add-note-button:hover {
+  background-color: red;
+  border-color: red;
+}
+
+/* edit workout (edit.ejs) --------------------------------------------- */

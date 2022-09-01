@@ -15,6 +15,7 @@ const scheduleSchema = new Schema({
     sets: {type: Number},
     reps: {type: Number},
     weights: {type: String},
+    // icebox items (want to let the users to chose the workouts created in the workout schema instead of typing it separately):
     // workout: [{
     //     type: Schema.Types.ObjectId,
     //     ref: 'Workout',
