@@ -4,7 +4,7 @@
 <%- include('../partials/header') %>
 
 <form id="add-to-schedule-form" action="/schedules" method="POST">
-  <label>Day:</label>
+  <label><span>D</span>ay</label>
   <select name="day">
     <option value="Monday">Monday</option>
     <option value="Tuesday">Tuesday</option>
@@ -14,7 +14,7 @@
     <option value="Saturday">Saturday</option>
     <option value="Sunday">Sunday</option>
   </select>
-  <label>Workout:</label>
+  <label><span>W</span>orkout</label>
   <input type="string" name="workout">
  <!-- <select name="workout">
     dynamically render workouts
@@ -23,14 +23,14 @@
     <option value="3">3</option>
     <option value="4">4</option>
   </select> -->
-  <label>Sets:</label>
+  <label><span>S</span>ets</label>
   <input type="number" name="sets">
-  <label>Reps:</label>
+  <label><span>R</span>eps</label>
   <input type="number" name="reps">
-  <label>Weights:</label>
+  <label><span>W</span>eights</label>
   <input type="text" name="weights">
 
-  <input type="submit" value="Add to Schedule">
+  <input class= "add-to-schedule-button" type="submit" value="Add to Schedule">
 </form>
 
 

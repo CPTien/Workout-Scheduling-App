@@ -1,6 +1,32 @@
 <%- include('../partials/header') %>
-<br>
+
+
+<form id="add-workout-form" action="/workouts" method="POST">
+  <label><span>W</span>orkout</label>
+  <input class="workout-text" type="text" name="name">
+  <label><span>C</span>ategory</label>
+  <select name="category">
+    <option value="weight-lifting">Weight-Lifting</option>
+    <option value="cross-fit">Cross-Fit</option>
+    <option value="cardio">Cardio</option>
+    <option value="other">Other</option>
+  </select>
+  <label><span>G</span>roup</label>
+  <select name="group">
+    <option value="upper-body">Upper-Body</option>
+    <option value="lower-body">Lower-Body</option>
+    <option value="other">Other</option>
+  </select>
+  <label><span>D</span>escription</label>
+  <textarea name="description"></textarea>
+  <!-- <label>Image:</label>
+  <input type="image" name="born"> -->
+  <input class="submit-button" type="submit" value="Add Workout">
+</form>
+
+
 <table id="Workout-Container">
+  <div>Workout List</div>
   <thead>
     <tr>
       <th>Workout</th>
@@ -21,27 +47,6 @@
     </tbody>
   </table>
 
-<form id="add-workout-form" action="/workouts" method="POST">
-  <label>Workout:</label>
-  <input type="text" name="name">
-  <label>Category:</label>
-  <select name="category">
-    <option value="weight-lifting">Weight-Lifting</option>
-    <option value="cross-fit">Cross-Fit</option>
-    <option value="cardio">Cardio</option>
-    <option value="other">Other</option>
-  </select>
-  <label>Group:</label>
-  <select name="group">
-    <option value="upper-body">Upper-Body</option>
-    <option value="lower-body">Lower-Body</option>
-    <option value="other">Other</option>
-  </select>
-  <label>Description:</label>
-  <textarea name="description"></textarea>
-  <!-- <label>Image:</label>
-  <input type="image" name="born"> -->
-  <input type="submit" value="Add Workout">
-</form>
+
 
 <%- include('../partials/footer') %>

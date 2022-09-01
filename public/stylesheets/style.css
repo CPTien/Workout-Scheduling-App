@@ -1,13 +1,12 @@
 * {
   padding: 0px;
-  margin: auto;
   font-family: Roboto, Monaco, Helvetica;
 }
 
 body {
   margin: 0;
   height: 100vh;
-  background-color: grey;
+  background-color: rgb(55, 55, 55);
 }
 /* header-------------------------------------- */
 .a-tag-header {
@@ -16,6 +15,7 @@ body {
   color: white;
   padding: 30px;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .app-name {
@@ -25,6 +25,7 @@ body {
 
 .plus{
   color: red;
+  padding-right: 28px;
 }
 .a-tag-header:hover {
   color:grey;
@@ -55,7 +56,9 @@ body > nav {
 }
 
 .the-title {
+  margin-left: 40px;
   color: white;
+  font-size: 40px;
 }
 
 /* footer ------------------------------------- */
@@ -77,4 +80,128 @@ footer{
 
 
 
-/* schedule page------------------------------------- */
+/* schedule page (index)------------------------------------- */
+
+table {
+  margin-left: 40px;
+  margin-top: 5px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: white;
+}
+
+th, td {
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 50px;
+  width: 100px;
+  color: white;
+}
+
+.last {
+  padding-right: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+div {
+  margin-left: 40px;
+  font-size: 30px;
+  color: white;
+}
+
+span {
+  color: red;
+}
+
+/* add workout--------------------------------------------- */
+
+#add-workout-form {
+  margin-top: 20px;
+  padding-left: 40px;
+}
+
+label {
+  display: block;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+
+select {
+  color: black;
+  width: 150px;
+}
+
+.workout-text {
+  width: 150px;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: block;
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 20px;
+  background-color: #202124;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+} 
+
+
+/* add workout to schedule --------------------------------------------- */
+
+#add-to-schedule-form {
+  margin-top: 20px;
+  padding-left: 40px;
+}
+
+.add-to-schedule-button {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: block;
+  border-radius: 4px;
+  border: 2px solid;
+  font-size: 20px;
+  background-color: #202124;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.add-to-schedule-button:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+} 
+
+/* edit detail --------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* edit workout --------------------------------------------- */
