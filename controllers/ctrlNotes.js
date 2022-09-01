@@ -3,7 +3,6 @@ const Schedule = require('../models/modelSchedule');
 
 
 function createNote(req, res) {
-    // Find the schedule to embed the note within
     Schedule.findById(req.params.id, function (err, schedule) {
         
         req.body.user = req.user._id;
@@ -30,13 +29,7 @@ function deleteNote(req, res, next) {
     })
 }
 
-function updateNote(req, res) {
-
-}
-
-
 module.exports = {
     createNote,
     deleteNote,
-    updateNote,
 }; 

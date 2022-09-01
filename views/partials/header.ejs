@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/0a825f7689.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <title>Workout-Planner</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/0a825f7689.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <title>Workout-Planner</title>
 
 </head>
 <body>
 <nav>    
-    <i class="material-symbols-outlined">heart_plus</i><a class="app-name">Fitness<span class="plus">+</span></a>
-    <% if (user) { %>
-        <a class="a-tag-header" href="/workouts/new">Workout</a>
-        <a class="a-tag-header" href="/schedules">Schedule</a>
-        <a class="a-tag-header" href="/schedules/new">Edit Schedule</a>
-        <a class="a-tag-header" href="/logout">Log out</a>
-        <% } else { %>
-        <!-- to update log out  -->
-        <a class="a-tag-header" href="/auth/google" class="login">Log In</a>
-        <% } %>
+  <i class="material-symbols-outlined">heart_plus</i><a class="app-name">Fitness<span class="plus">+</span></a>
+  <% if (user) { %>
+    <a class="a-tag-header" href="/workouts/new">Workout</a>
+    <a class="a-tag-header" href="/schedules">Schedule</a>
+    <a class="a-tag-header" href="/schedules/new">Edit Schedule</a>
+    <a class="a-tag-header" href="/logout">Log out</a>
+  <% } else { %>
+    <!-- to update log out  -->
+    <a class="a-tag-header" href="/auth/google" class="login">Log In</a>
+  <% } %>
 </nav>
 <main>
-    <h1 class="the-title"><%=  title%></h1>
+  <h1 class="the-title"><%=  title%></h1>

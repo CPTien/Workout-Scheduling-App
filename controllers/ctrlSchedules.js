@@ -1,13 +1,6 @@
 const Workout = require('../models/modelWorkout');
 const Schedule = require('../models/modelSchedule');
 
-// function getAllWorkouts(req, res) {
-//   Workout.find({}, function(err, workouts) {
-//     console.log(workouts+"this is a workout")
-//     res.render('schedules/new', { title: 'Schedule', workouts });
-//   });
-// }
-
 function index(req, res) {
   Schedule.find({}, function(err, schedules) {
     res.render('schedules/index', { title: 'Schedule', schedules });
@@ -46,9 +39,7 @@ function editSchedule(req, res) {
 function updateSchedule(req, res) {
   Schedule.findOneAndUpdate(
     {_id: req.params.id},
-    // update object with updated properties
     req.body,
-    // options object with new: true to make sure updated doc is returned
     {new: true},
     function(err, schedule) {
       if (err || !schedule) return res.redirect('/schedules');
@@ -59,9 +50,7 @@ function updateSchedule(req, res) {
 
 function deleteSchedule(req, res) {
   Schedule.findOneAndDelete(
-    // Ensue that the book was created by the logged in user
     {_id: req.params.id}, function(err) {
-      // Deleted book, so must redirect to index
       res.redirect('/schedules');
     }
   );
@@ -75,5 +64,4 @@ module.exports = {
     editSchedule,
     updateSchedule,
     deleteSchedule,
-    // getAllWorkouts,
 };

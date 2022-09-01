@@ -1,6 +1,3 @@
-<!-- this is the add workout to schedule page -->
-<!-- be able to add: workout from workout schema and the sets, reps, weights, from the schedule schema -->
-
 <%- include('../partials/header') %>
 
 <form id="add-to-schedule-form" action="/schedules" method="POST">
@@ -16,13 +13,6 @@
   </select>
   <label><span>W</span>orkout</label>
   <input type="string" name="workout">
- <!-- <select name="workout">
-    dynamically render workouts
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select> -->
   <label><span>S</span>ets</label>
   <input type="number" name="sets">
   <label><span>R</span>eps</label>

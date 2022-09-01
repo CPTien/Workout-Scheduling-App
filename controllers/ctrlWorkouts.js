@@ -12,21 +12,12 @@ function createWorkout(req, res) {
 function newWorkout(req, res) {
   Workout.find({}, function (err, workouts) {
     res.render('workouts/new', {
-      title: 'Add Workout', // this is the H1 tag, or the page title 
+      title: 'Add Workout', 
       workouts
     });
   });
 }
 
-// this function if for adding the workouts created here to schedules/new page
-// function addWorkoutToSchedule(req, res){
-//   Schedule.findById(req.params.id, function(error, schedule){
-//     schedule.workout.push(req.body.workoutId);
-//     schedule.save(function(error){
-//       res.redirect(`/schedules`);
-//     });
-//   });
-// }
 
 
 module.exports = {

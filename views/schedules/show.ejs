@@ -1,73 +1,71 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <table>
-        <thead>
-            <tr>
-                <th>Workout</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Weights</th>
-                <th></th>
-                <th></th>
-        </thead>
-        <tbody class="tbody-text">
-            <tr>
-                <th class="th-text"><%= schedule.workout %></th>
-                <th class="th-text"><%= schedule.sets %></th>
-                <th class="th-text"><%= schedule.reps %></th>
-                <th class="th-text"><%= schedule.weights %></th>
-                <th>
-                    <form action="/schedules/<%= schedule._id %>/edit" method="GET">
-                        <button class="edit-button" type="submit">Edit</button>
-                    </form>
-                </th>
-                <th>    
-                    <form action="/schedules/<%= schedule._id %>?_method=DELETE" method="POST">
-                        <button class="delete-button" type="submit">X</button>
-                    </form>
-                </th>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Workout</th>
+        <th>Sets</th>
+        <th>Reps</th>
+        <th>Weights</th>
+        <th></th>
+        <th></th>
+      </thead>
+    <tbody class="tbody-text">
+      <tr>
+        <th class="th-text"><%= schedule.workout %></th>
+        <th class="th-text"><%= schedule.sets %></th>
+        <th class="th-text"><%= schedule.reps %></th>
+        <th class="th-text"><%= schedule.weights %></th>
+        <th>
+          <form action="/schedules/<%= schedule._id %>/edit" method="GET">
+            <button class="edit-button" type="submit">Edit</button>
+          </form>
+        </th>
+        <th>    
+          <form action="/schedules/<%= schedule._id %>?_method=DELETE" method="POST">
+            <button class="delete-button" type="submit">X</button>
+          </form>
+        </th>
+      </tr>
+    </tbody>
+  </table>
 <br>
 
 
 </section>
 
 <section class="note-table-container">
-    <h2 class="notes-text">Note List</h2>
+  <h2 class="notes-text">Note List</h2>
 <% if (schedule.notes.length) { %>
-    <table class="note-table">
-        <tbody>
-        <% schedule.notes.forEach(function(n) { %>
-            <tr>
-            <td>
-                <% if (user && user._id.equals(n.user)) { %>
-                    <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
-                        <button class="delete-note-button" type="submit">x</button>
-                    </form>
-                <% } %>
-            </td>
-            <td><%= n.content %></td>
-            </tr>
-        <% }); %>
-        </tbody>
-    </table>
+  <table class="note-table">
+    <tbody>
+      <% schedule.notes.forEach(function(n) { %>
+        <tr>
+          <td>
+            <% if (user && user._id.equals(n.user)) { %>
+              <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+                <button class="delete-note-button" type="submit">x</button>
+              </form>
+            <% } %>
+          </td>
+          <td><%= n.content %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
 <% } else { %>
-    <h5>No Notes Yet</h5>
+  <h5>No Notes Yet</h5>
 <% } %>
 
 
 <% if (user) { %>
-    <form id="add-note-form" method="POST" action="/schedules/<%= schedule._id %>/notes">
-        <textarea class="note-textarea" name="content"></textarea>
-        <input class="add-note-button" type="submit" value="+">
-    </form>
+  <form id="add-note-form" method="POST" action="/schedules/<%= schedule._id %>/notes">
+    <textarea class="note-textarea" name="content"></textarea>
+      <input class="add-note-button" type="submit" value="+">
+  </form>
 <% } %>
 </section>
-
-
 
 <%- include('../partials/footer') %>
 

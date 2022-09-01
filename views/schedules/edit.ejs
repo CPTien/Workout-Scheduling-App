@@ -1,17 +1,13 @@
 <%- include('../partials/header') %>
 
 <form id="edit-schedule-form" action="/schedules/<%= schedule._id %>?_method=PUT" method="POST">
-    <label>Sets:</label>
-    <input type="number" name="sets">
-    <label>Reps:</label>
-    <input type="number" name="reps">
-    <label>Weights:</label>
-    <input type="text" name="weights">
-
-    <input class="edit-s-button" type="submit" value="Edit Schedule">
+  <label>Sets:</label>
+  <input type="number" name="sets">
+  <label>Reps:</label>
+  <input type="number" name="reps">
+  <label>Weights:</label>
+  <input type="text" name="weights">
+  <input class="edit-s-button" type="submit" value="Edit Schedule">
 </form>
-
-
-
 
 <%- include('../partials/footer') %>
