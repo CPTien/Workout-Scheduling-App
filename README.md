@@ -7,10 +7,13 @@
 
 ## Project Screenshots
 
-to add once done with CSS
+![Index Page](public/images/index.jpg)
 
+![Add Workout Page](public/images/add-workout.jpg)
 
+![Show/Detail Page](public/images/schedule-detail.jpg)
 
+![Edit Page](public/images/edit-schedule.jpg)
 
 ---
 
