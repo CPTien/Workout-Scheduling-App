@@ -7,13 +7,14 @@
 
 ## Project Screenshots
 
-![Index Page](public/images/index.jpg)
-
-![Add Workout Page](public/images/add-workout.jpg)
-
-![Show/Detail Page](public/images/schedule-detail.jpg)
-
-![Edit Page](public/images/edit-schedule.jpg)
+#### Index Page
+![Index Page](public/images/index.jpg)<br/>
+#### Add Workout Page
+![Add Workout Page](public/images/add-workout.jpg)<br/>
+#### Show/Detail Page
+![Show/Detail Page](public/images/schedule-detail.jpg)<br/>
+#### Edit Page
+![Edit Page](public/images/edit-schedule.jpg)<br/>
 
 ---
 
@@ -22,6 +23,7 @@
 - [ERD](https://lucid.app/lucidchart/33d6ab39-7949-43c8-b828-3e0ead6245bb/edit?view_items=~7TL2xNExdQy%2C7-TL7n03F8z7%2Cg5TL~QOm0nG4%2CoCpMS3jNEBky%2C5mULj6G8NYB9&invitationId=inv_e674c9e9-dc2d-4bb4-be45-b9f0536e9d9e#)
 - [Wireframe](https://whimsical.com/ga-project-02-WfMXTfDJiFG2nbeKqdyxmG)
 - [Pseudocode](https://docs.google.com/document/d/1VOesUp2EXA2j8L3ZddxWR7f7b98kpJwnNBxCJGTCCo4/edit?usp=sharing)
+- [Heroku](https://heroku-project-02.herokuapp.com/schedules)
 ---
 
 ## Technologies Used
