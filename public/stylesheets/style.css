@@ -167,6 +167,12 @@ textarea {
   border-color: white;
 } 
 
+.log-in-message {
+  margin-left: 40px;
+  margin-top: 40px;
+  color:rgb(198, 139, 115);
+}
+
 
 /* add workout to schedule --------------------------------------------- */
 

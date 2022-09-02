@@ -1,29 +1,29 @@
 <%- include('../partials/header') %>
 
-
+<% if (user) { %>
 <form id="add-workout-form" action="/workouts" method="POST">
-  <label><span>W</span>orkout</label>
+  <label>Workout</label>
   <input class="workout-text" type="text" name="name">
-  <label><span>C</span>ategory</label>
+  <label>Category</label>
   <select name="category">
     <option value="weight-lifting">Weight-Lifting</option>
     <option value="cross-fit">Cross-Fit</option>
     <option value="cardio">Cardio</option>
     <option value="other">Other</option>
   </select>
-  <label><span>G</span>roup</label>
+  <label>Group</label>
   <select name="group">
     <option value="upper-body">Upper-Body</option>
     <option value="lower-body">Lower-Body</option>
     <option value="other">Other</option>
   </select>
-  <label><span>D</span>escription</label>
+  <label>Description</label>
   <textarea name="description"></textarea>
   <!-- <label>Image:</label>
   <input type="image" name="born"> -->
   <input class="submit-button" type="submit" value="Add Workout">
 </form>
-
+<% } %>
 
 <table id="Workout-Container">
   <div>Workout List</div>

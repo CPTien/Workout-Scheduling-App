@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 
+<% if (user) { %>
 <form id="add-to-schedule-form" action="/schedules" method="POST">
-  <label><span>D</span>ay</label>
+  <label>Day</label>
   <select name="day">
     <option value="Monday">Monday</option>
     <option value="Tuesday">Tuesday</option>
@@ -11,17 +12,17 @@
     <option value="Saturday">Saturday</option>
     <option value="Sunday">Sunday</option>
   </select>
-  <label><span>W</span>orkout</label>
+  <label>Workout</label>
   <input type="string" name="workout">
-  <label><span>S</span>ets</label>
+  <label>Sets</label>
   <input type="number" name="sets">
-  <label><span>R</span>eps</label>
+  <label>Reps</label>
   <input type="number" name="reps">
-  <label><span>W</span>eights</label>
+  <label>Weights</label>
   <input type="text" name="weights">
 
   <input class= "add-to-schedule-button" type="submit" value="+">
 </form>
-
+<% } %>
 
 <%- include('../partials/footer') %>

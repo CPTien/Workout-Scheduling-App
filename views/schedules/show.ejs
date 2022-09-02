@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<% if (user) { %>
 <section id="show-page">
   <table>
     <thead>
@@ -66,6 +67,7 @@
   </form>
 <% } %>
 </section>
+<% } %>
 
 <%- include('../partials/footer') %>
 
